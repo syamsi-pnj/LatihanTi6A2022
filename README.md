@@ -1,0 +1,1 @@
+# LatihanTi6A2022
