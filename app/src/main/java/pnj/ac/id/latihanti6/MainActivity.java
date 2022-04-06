@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnPindah;
+    Button btnPindah,btnBrowser;
     int REQUEST_CODE_CAMERA = 100;
     int REQUEST_CODE_GALERY = 200;
 
@@ -22,8 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnPindah = findViewById(R.id.btnPindah);
-
+        btnBrowser= findViewById(R.id.btnBrowser);
         btnPindah.setOnClickListener(this);
+        btnBrowser.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                intent.putExtra("umur", 18);
 //                startActivity(intent);
                 pilihDialog();
+                break;
+            case R.id.btnBrowser:
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://google.com"));
+                startActivity(intent);
                 break;
         }
     }

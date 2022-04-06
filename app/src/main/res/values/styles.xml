@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/primaryBlue</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="fontFamily">@font/font_family</item>
+<!--        <item name="fontFamily">@font/font_family</item>-->
     </style>
 
 </resources>
